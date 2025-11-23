@@ -1,0 +1,23 @@
+.DoctorBG {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh; /* ให้พื้นหลังเต็มหน้าจอ */
+   
+}
+.doctor-slider {
+  overflow: hidden;
+  gap: 8px;      /* ลดช่องว่างระหว่าง card */
+  padding: 0 30px; /* ปรับให้ไม่ชนปุ่มซ้ายขวา */
+}
+
+.doctor-card:hover {
+  transform: scale(1.040);
+  cursor: pointer;
+}
+
+/* scrollbar ซ่อน */
+.doctor-slider::-webkit-scrollbar {
+  display: none;
+}
+
