@@ -1,0 +1,53 @@
+/* ลบเส้นขอบด้านซ้าย–ขวาของ th และ td */
+.table th, 
+.table td {
+    border-left: none !important;
+    border-right: none !important;
+}
+
+/* ให้ตารางเลื่อนในกรอบ ไม่ล้นจอ */
+.admin-table-wrapper {
+    max-height: 60vh;
+    overflow-y: auto;
+    overflow-x: auto;
+    padding-right: 5px;
+    border-radius: 8px;
+}
+
+/* ปรับ scrollbar ให้ดูเรียบ */
+.admin-table-wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.admin-table-wrapper::-webkit-scrollbar-thumb {
+    background: #cfcfcf;
+    border-radius: 4px;
+}
+
+.admin-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+}
+
+/* ทำให้ข้อความไม่ติดขอบ */
+.table td, 
+.table th {
+    padding: 12px 15px;
+}
+
+/* ป้องกันตารางกว้างเกิน */
+.table {
+    table-layout: auto;
+    width: 100%;
+}
+
+/* ปรับความสวยของ Button Pagination */
+.pagination-btn {
+    min-width: 40px;
+}
+
+/* Responsive เพิ่มเติม */
+@media (max-width: 768px) {
+    .admin-table-wrapper {
+        max-height: 50vh;
+    }
+}

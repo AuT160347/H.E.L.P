@@ -1,0 +1,83 @@
+/* ===== เดิม ===== */
+.DoctorBG {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh; 
+}
+
+.doctor-slider {
+  overflow: hidden;
+  gap: 8px;
+  padding: 0 30px;
+}
+
+.doctor-card:hover {
+  transform: scale(1.040);
+  cursor: pointer;
+}
+
+.doctor-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== ใหม่: ทำให้ Search Box responsive ===== */
+@media (max-width: 576px) {
+
+    .search-box-wrapper {
+        width: 100% !important;
+        height: auto !important;
+        padding: 1rem !important;
+    }
+
+    .search-inner {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-top: 10px !important;
+    }
+
+    .search-inner .form-control {
+        font-size: 14px !important;
+    }
+
+    .search-inner button {
+        font-size: 14px !important;
+        padding: 10px !important;
+        width: 100%;
+        margin-top: 8px;
+    }
+}
+
+/* ===== ปรับหมอแนะนำสำหรับมือถือ (แก้ปัญหาขอบล้น) ===== */
+@media (max-width: 576px) {
+
+    .doctor-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        padding: 0 10px !important;
+        width: 100% !important;
+    }
+
+    .doctor-card {
+        width: 100% !important;         /* ใช้เต็มช่องของ grid */
+        max-width: 100% !important;     /* ไม่เกินหน้าจอ */
+        min-height: 160px !important;
+        padding: 10px !important;
+        border-radius: 12px !important;
+    }
+
+    .doctor-card img {
+        width: 55px !important;
+        height: 55px !important;
+    }
+
+    .doctor-card h5 {
+        font-size: 0.75rem !important;
+        margin-top: 4px !important;
+    }
+
+    .doctor-card p {
+        font-size: 0.7rem !important;
+    }
+}
+

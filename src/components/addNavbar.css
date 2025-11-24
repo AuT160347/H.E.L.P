@@ -1,0 +1,80 @@
+.logo-circle {
+  width: 25px;
+  height: 25px;
+  background-color: #52c0f0;
+  border-radius: 50%;
+}
+
+btn-nav {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #725AC1;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #725AC1;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 5px rgba(0, 255, 0, 0.7);
+}
+
+btn-nav:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #725AC1;
+}
+
+btn-nav:active {
+  transform: scale(0.9);
+}
+
+.navbar,
+.navbar-nav,
+.navbar-collapse,
+.container-fluid {
+  overflow: visible !important;
+}
+
+
+/* Styling dropdown */
+.notify-dropdown {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
+  width: 260px;
+  padding: 10px;
+  z-index: 2000;
+}
+
+/* dropdown slide animation */
+.notify-dropdown-anim {
+  animation: slideDown 0.25s ease-out forwards;
+}
+
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* bell shake */
+.bell-shake {
+  animation: bellShake 0.8s ease-in-out infinite;
+}
+
+@keyframes bellShake {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-15deg); }
+  40% { transform: rotate(15deg); }
+  60% { transform: rotate(-10deg); }
+  80% { transform: rotate(10deg); }
+}
+
+
