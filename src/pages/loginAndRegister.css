@@ -1,0 +1,251 @@
+/* พื้นหลังรวม, ซ่อน navbar/footer โดยใช้ full viewport */
+.auth-page-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+  padding: 24px;
+}
+
+/* กล่องใหญ่ตรงกลาง */
+.auth-shell {
+  display: flex;
+  width: 100%;
+  max-width: 1100px;
+  background: #f9fafb;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+}
+
+/* ฝั่งซ้าย */
+.auth-left {
+  flex: 1;
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+  padding: 32px 40px;
+  color: #e5f0ff;
+  display: flex;
+  align-items: center;
+}
+
+.auth-left-inner {
+  width: 100%;
+}
+
+.auth-tagline {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.auth-tagline span {
+  color: #bfdbfe;
+}
+
+/* การ์ดหมอ */
+.auth-doctor-card {
+  position: relative;
+  background: radial-gradient(circle at top, #3b82f6, #1d4ed8);
+  border-radius: 24px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-doctor-img {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 20px;
+}
+
+/* pill stats */
+.auth-pill {
+  position: absolute;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.auth-pill-top {
+  left: 10%;
+  top: 40%;
+}
+
+.auth-pill-bottom {
+  right: 12%;
+  bottom: 12%;
+}
+
+/* ฝั่งขวา */
+.auth-right {
+  flex: 1;
+  padding: 32px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 24px !important;
+  border: none !important;
+  padding: 24px 28px;
+}
+
+/* Logo + toggle */
+.auth-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.auth-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.auth-logo-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.auth-logo-text {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* tab ด้านบน */
+.auth-toggle {
+  display: inline-flex;
+  background: #e5e7eb;
+  border-radius: 999px;
+  padding: 2px;
+}
+
+.auth-toggle-btn {
+  border: none;
+  background: transparent;
+  font-size: 0.78rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.auth-toggle-btn.active {
+  background: #ffffff;
+  color: #111827;
+  font-weight: 600;
+}
+
+.auth-toggle-btn.inactive {
+  color: #6b7280;
+}
+
+/* Title+Subtitle */
+.auth-title {
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.auth-subtitle {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+/* ปุ่มหลัก */
+.auth-primary-btn {
+  background: #2563eb;
+  border-color: #2563eb;
+  border-radius: 999px;
+  padding-block: 10px;
+}
+
+.auth-primary-btn:hover,
+.auth-primary-btn:focus {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+/* ลิงก์ด้านล่าง */
+.auth-link-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.auth-link-btn:hover {
+  text-decoration: underline;
+}
+
+
+.auth-back-btn {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: transparent;
+  border: none;
+  font-size: 0.95rem;
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.auth-back-btn:hover {
+  color: #1d4ed8;
+}
+.auth-right {
+  position: relative;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .auth-shell {
+    flex-direction: column;
+    border-radius: 24px;
+  }
+
+  .auth-left,
+  .auth-right {
+    padding: 24px;
+  }
+
+  .auth-left {
+    order: 1;
+  }
+
+  .auth-right {
+    order: 2;
+  }
+
+  .auth-doctor-card {
+    margin-top: 8px;
+  }
+}
